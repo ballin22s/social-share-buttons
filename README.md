@@ -1,8 +1,6 @@
 # Social Share Button
 
-This is a gem to helper you quick create a share feature in you Rails apps.
-
-[![Gem Version](https://badge.fury.io/rb/social-share-button.svg)](https://badge.fury.io/rb/social-share-button)
+This is a gem to helper you quick create a share feature in you Rails apps.  
 
 # Sites list
 
@@ -23,6 +21,7 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 * Pinterest
 * Email
 * LinkedIn
+* Reddit
 
 ## Screenshot
 
@@ -131,7 +130,4 @@ Here are the mapping of attributes depending on you data-type parameter
 |                   |           | data-source                |
 </pre>
 
-
-## Demo
-
-[http://ruby-china.org/wiki/about](http://ruby-china.org/wiki/about)
+Created by: huacnlee
