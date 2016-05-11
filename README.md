@@ -48,7 +48,7 @@ You can config `config/initializers/social_share_button.rb` to choose which site
 
 ```ruby
 SocialShareButton.configure do |config|
-  config.allow_sites = %w(twitter facebook google_plus weibo douban tqq renren qq kaixin001 baidu google_bookmark delicious tumblr plurk pinterest email linkedin)
+  config.allow_sites = %w(twitter facebook google_plus weibo douban tqq renren qq kaixin001 baidu google_bookmark delicious tumblr plurk pinterest email reddit linkedin)
 end
 ```
 
