@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "social_share_button/version"
 
 Gem::Specification.new do |s|
-  s.name        = "social-share-buttons"
+  s.name        = "social-share-button"
   s.version     = SocialShareButton::VERSION
   s.authors     = ["Sergio"]
   s.email       = ["jmpndcrew@yahoo.com"]
