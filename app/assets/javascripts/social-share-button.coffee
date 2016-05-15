@@ -31,7 +31,9 @@ window.SocialShareButton =
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}&sel=#{desc}",popup)
       when "facebook"
-        SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=#{url}&title=#{title}&description=#{desc}&image=#{img}",popup)
+        img_str = ''
+        img_str = "&image=#{img}" if img.length > 0
+        SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=#{url}&title=#{title}&description=#{desc}#{img_str}",popup)
       when "qq"
         SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}&title=#{title}&pics=#{img}&summary=#{desc}&site=#{appkey}", popup)
       when "tqq"
@@ -81,7 +83,8 @@ window.SocialShareButton =
             else # actually, it's a link clause
               title = get_tumblr_extra('title') || title
               url = get_tumblr_extra('url') || url
-              "name=#{title}&url=#{url}"
+              desc = get_tumblr_extra('desc') || desc
+              "name=#{title}&url=#{url}&description=#{desc}"
 
 
           "/#{path}?#{params}"
