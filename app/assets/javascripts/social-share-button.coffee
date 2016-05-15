@@ -31,9 +31,10 @@ window.SocialShareButton =
       when "douban"
         SocialShareButton.openUrl("http://shuo.douban.com/!service/share?href=#{url}&name=#{title}&image=#{img}&sel=#{desc}",popup)
       when "facebook"
-        img_str = ''
-        img_str = "&image=#{img}" if img.length > 0
-        SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=#{url}&title=#{title}&description=#{desc}#{img_str}",popup)
+        if img == "%2Fphotos%2Fsmall%2Fmissing.png"
+          SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=#{url}&title=#{title}&description=#{desc}", popup)          
+        else
+          SocialShareButton.openUrl("http://www.facebook.com/sharer.php?u=#{url}&title=#{title}&description=#{desc}&image=#{img}", popup)
       when "qq"
         SocialShareButton.openUrl("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=#{url}&title=#{title}&pics=#{img}&summary=#{desc}&site=#{appkey}", popup)
       when "tqq"
@@ -53,9 +54,10 @@ window.SocialShareButton =
       when "plurk"
         SocialShareButton.openUrl("http://www.plurk.com/?status=#{title}: #{url}&qualifier=shares", popup)
       when "pinterest"
-        img_str = ''
-        img_str = "&media=#{img}" if img.length > 0
-        SocialShareButton.openUrl("http://www.pinterest.com/pin/create/button/?url=#{url}&description=#{title}#{img_str}", popup)
+        if img == "%2Fphotos%2Fsmall%2Fmissing.png"
+          SocialShareButton.openUrl("http://www.pinterest.com/pin/create/button/?url=#{url}&description=#{title}", popup)          
+        else
+          SocialShareButton.openUrl("http://www.pinterest.com/pin/create/button/?url=#{url}&description=#{title}&media=#{img}", popup)
       when "linkedin"
         SocialShareButton.openUrl("https://www.linkedin.com/shareArticle?url=#{url}&title=#{title}", popup)
       when "reddit"
