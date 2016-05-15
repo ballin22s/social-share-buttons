@@ -51,7 +51,9 @@ window.SocialShareButton =
       when "plurk"
         SocialShareButton.openUrl("http://www.plurk.com/?status=#{title}: #{url}&qualifier=shares", popup)
       when "pinterest"
-        SocialShareButton.openUrl("http://www.pinterest.com/pin/create/button/?url=#{url}&media=#{img}&description=#{title}", popup)
+        img_str = ''
+        img_str = "&media=#{img}" if img.length > 0
+        SocialShareButton.openUrl("http://www.pinterest.com/pin/create/button/?url=#{url}&description=#{title}#{img_str}", popup)
       when "linkedin"
         SocialShareButton.openUrl("https://www.linkedin.com/shareArticle?url=#{url}&title=#{title}", popup)
       when "reddit"
